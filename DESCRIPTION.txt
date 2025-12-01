@@ -8,4 +8,5 @@ Imports:
     ggplot2,
     readxl,
     httr,
-    lubridate
+    lubridate,
+    zoo
