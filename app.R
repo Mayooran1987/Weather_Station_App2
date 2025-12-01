@@ -9,7 +9,7 @@ library(dplyr)
 #library(forecast)
 
 if (requireNamespace("zoo", quietly = TRUE)) {
-  library(zoo)
+library(zoo)
 } else {
   stop("Please install the zoo package: install.packages('zoo')")
 }
