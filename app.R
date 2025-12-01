@@ -13,11 +13,11 @@ if (!require(zoo, quietly = TRUE)) {
   library(zoo)
 }
 
-if (requireNamespace("forecast", quietly = TRUE)) {
+if (!require(forecast, quietly = TRUE)) {
+  install.packages("forecast", repos = "https://cloud.r-project.org/")
   library(forecast)
-} else {
-  stop("Please install the forecast package: install.packages('forecast')")
 }
+
 
 if (requireNamespace("DT", quietly = TRUE)) {
   library(DT)
