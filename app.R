@@ -8,8 +8,8 @@ library(dplyr)
 #library(zoo)
 #library(forecast)
 
-if (!require(zoo)) {
-  install.packages("zoo")
+if (!require(zoo, quietly = TRUE)) {
+  install.packages("zoo", repos = "https://cloud.r-project.org/")
   library(zoo)
 }
 
