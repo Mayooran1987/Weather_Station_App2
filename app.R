@@ -3,7 +3,7 @@ library(plotly)
 library(readxl)
 library(httr)
 #library(DT)
-library(lubridate)
+#library(lubridate)
 library(dplyr)
 library(zoo)
 library(forecast)
@@ -14,7 +14,11 @@ if (requireNamespace("DT", quietly = TRUE)) {
   stop("Please install the DT package: install.packages('DT')")
 }
 
-  
+if (!requireNamespace("lubridate", quietly = TRUE)) {
+  install.packages("lubridate")
+}
+library(lubridate)
+
 # Function to download and convert data to RDS
 download_and_convert_to_rds <- function() {
   tryCatch({
