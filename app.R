@@ -6,12 +6,18 @@ library(httr)
 #library(lubridate)
 library(dplyr)
 #ibrary(zoo)
-library(forecast)
+#library(forecast)
 
 if (requireNamespace("zoo", quietly = TRUE)) {
   library(zoo)
 } else {
   stop("Please install the zoo package: install.packages('zoo')")
+}
+
+if (requireNamespace("forecast", quietly = TRUE)) {
+  library(forecast)
+} else {
+  stop("Please install the forecast package: install.packages('forecast')")
 }
 
 if (requireNamespace("DT", quietly = TRUE)) {
