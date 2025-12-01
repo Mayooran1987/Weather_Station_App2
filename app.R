@@ -8,6 +8,12 @@ library(lubridate)
 library(zoo)
 library(forecast)
 
+if (requireNamespace("DT", quietly = TRUE)) {
+  library(DT)
+} else {
+  stop("Please install the DT package: install.packages('DT')")
+}
+
 # Function to download and convert data to RDS
 download_and_convert_to_rds <- function() {
   tryCatch({
