@@ -15,6 +15,10 @@ if (requireNamespace("DT", quietly = TRUE)) {
   stop("Please install the DT package: install.packages('DT')")
 }
 
+if (!require(lubridate, quietly = TRUE)) {
+  install.packages("lubridate")
+  library(lubridate)
+  
 # Function to download and convert data to RDS
 download_and_convert_to_rds <- function() {
   tryCatch({

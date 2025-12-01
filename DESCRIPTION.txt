@@ -1,0 +1,11 @@
+Package: WeatherStationApp2
+Title: Weather Station Application
+Version: 1.0.0
+Depends: R (>= 4.0.0)
+Imports:
+    shiny,
+    plotly,
+    ggplot2,
+    readxl,
+    httr,
+    lubridate
